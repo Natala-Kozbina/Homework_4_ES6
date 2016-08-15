@@ -1,0 +1,66 @@
+html, body {
+	background: #9fdf9f;
+	height: 100%;
+	width:100%;
+	padding: 0px;
+	margin: 0px;
+}
+
+.age_position {
+	margin-left: 45px;
+}
+
+.button_filter {
+	margin-left: 38px;
+}
+
+.button_add {
+	width: 100px;
+	margin-left: 210px;
+	cursor: pointer;
+}
+
+.button_update {
+    width: 100px;
+	margin-left: 210px;
+	cursor: pointer;
+}
+
+.button_go {
+	width: 100px;
+	margin-left: 105px;
+	cursor: pointer;
+}
+
+.button_save {
+	width: 100px;
+	margin-left: 50px;
+	cursor: pointer;
+}
+
+.filter_cont {
+	width: 500px;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+
+table {
+	width: 600px;
+	border-collapse: collapse;
+}
+
+th, td, tr {
+	width: 100px;
+	border: solid 1px #1E2F7D;
+	text-align: center;
+	padding: 0px;
+	overflow: hidden;	
+}
+
+th {
+	cursor: pointer;
+}
+
+h2 {
+	margin-left: 265px;
+}

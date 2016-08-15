@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Filter table</title>
+      
+        <link rel="stylesheet" type="text/css" href="css/style_my.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <script src="underscore-min.js" charset="utf-8"></script>
+        <script src="init_my.js" charset="utf-8"></script>
+        <script src="storage_my.js" charset="utf-8"></script>
+        <script src="manager_my.js" charset="utf-8"></script>
+        <script src="main_my.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <div class = "filter_cont">
+            <div class="container">
+                <form action="index.html" method="post">
+                    <div class="field">
+                        <label>
+                            Last Name
+                            <input id="lastName" name="lastName" placeholder="Last Name" required type="text"  class = "classLastName"/>
+                        </label>
+                    </div>
+                    <br>
+                    <div class="field">
+                        <label>
+                            First Name
+                            <input id="firstName" name="firstName" placeholder="First Name" required class = "classFirstName" />
+                        </label>
+                    </div>
+                    <br>
+                    <div class="field">
+                        <label>
+                            Age
+                            <input id="age" name="age" placeholder="Age" class = "age_position classAge" required type="number" min="0" max="100"  />
+                        </label>
+                    <button id="add-button" type="button" name="addButton" class = "button_add">Add</button>
+                    <button id="update-button" type="button" name="updateButton" class = "button_update" hidden>Update</button>
+                    </div>
+                     <br>
+                    <div class="field">
+                        <label>
+                            Filter
+                            <input id = "filter"  name = "filter" placeholder="Filter" class = "button_filter" />
+                        </label>                  
+                    <button id="go-button" type="button" name="goButton" class = "button_go">Go!</button>
+                    </div>  
+                </form>
+                <br>
+                <div class = "save">
+                    <button id = "clear-button"  type = "button" name="clearButton"  class = "button_save">Clear</button>
+                    <button id = "save-button"   type = "button" name="saveButton"   class = "button_save">Save</button>
+                    <button id = "cancel-button" type = "button" name="cancelButton" class = "button_save">Cancel</button>
+                </div>
+                <br>
+        </div> 
+
+        <h2>People</h2>
+
+        <table id = "table" class = "table_position"> 
+            <thead>
+            <tr>
+                <th  id = "table-id">ID</th>
+                <th  id = "table-last-name" data-type="string">Last Name</th>
+                <th  id = "table-first-name" data-type="string">First Name</th>
+                <th  id = "table-age" data-type="number">Age</th>
+                <th  id = "table-edit">Edit</th>
+                <th  id = "table-delete">Delete</th>
+            </tr>
+            </thead>
+        
+                     
+        <tbody class="list">    
+            <template id="item">
+                <tr class="item" data-id="{{ id }}">
+                    <td> {{ id }} </td>
+                    <td> {{ lastName }} </td>
+                    <td> {{ firstName }} </td>
+                    <td> {{ age }} </td>
+                    <td><i id = "edit-button" class="fa fa-pencil"  aria-hidden="true"></i></td>
+                    <td><i id = "delete-button" class="fa fa-trash-o"  aria-hidden="true"></i></td>
+                </tr>
+            </template>
+        </tbody>
+        </table>           
+            
+        </div>
+    </body>
+</html>
